@@ -24,30 +24,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Jupyter Book
+      - name: Install Jupyter Book v1
         run: pip install "jupyter-book>=1.0,<2"
 
-      - name: Show files
-        run: |
-          echo "=== Root files ==="
-          ls -la
-          echo "=== _config.yml ==="
-          cat _config.yml
-          echo "=== _toc.yml ==="
-          cat _toc.yml
-          echo "=== Notebooks ==="
-          find notebooks -name "*.ipynb" | wc -l
-
       - name: Build the book
-        run: jupyter-book build . --all -v
-
-      - name: Verify build output
-        run: |
-          if [ ! -d "_build/html" ]; then
-            echo "ERROR: _build/html does not exist!"
-            exit 1
-          fi
-          echo "Build produced $(find _build/html -name '*.html' | wc -l) HTML files"
+        run: jupyter-book build . --all
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
