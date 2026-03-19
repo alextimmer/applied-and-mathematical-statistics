@@ -1,0 +1,30 @@
+name: amstats
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - jupyterlab>=4.0,<5
+  - notebook>=7.0,<8
+  - numpy>=1.26
+  - scipy>=1.12,<2
+  - pandas>=2.2,<3
+  - matplotlib>=3.8,<4
+  - seaborn>=0.13,<1
+  - sympy>=1.12,<2
+  - statsmodels>=0.14,<1
+  - scikit-learn>=1.4,<2
+  - networkx>=3.2,<4
+  - ffmpeg                # required by Manim for rendering
+  - pip
+  - pip:
+      - manim==0.18.*
+      - pymc>=5.10,<6
+      - arviz>=0.17,<1
+      - cmdstanpy>=1.2,<2
+      - dowhy>=0.11,<1
+      - nbval>=0.11,<1
+      - papermill>=2.5,<3
+      - ipywidgets>=8.1,<9
+      - jupyter-book>=1.0,<2
+      - nbconvert>=7.14,<8

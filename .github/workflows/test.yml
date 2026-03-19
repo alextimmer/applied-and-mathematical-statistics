@@ -1,0 +1,41 @@
+name: Test Notebooks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install system dependencies (Manim + LaTeX)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libcairo2-dev libpango1.0-dev ffmpeg \
+            texlive texlive-latex-extra texlive-fonts-extra \
+            texlive-latex-recommended texlive-science
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -e ".[dev]"
+          pip install manim pymc arviz nbval papermill jupyter
+
+      - name: Run notebook smoke tests
+        run: |
+          pytest --nbval-lax notebooks/01_probability_basics/01_sample_spaces.ipynb -v
+
+      - name: Run unit tests
+        run: |
+          pytest tests/ -v --tb=short

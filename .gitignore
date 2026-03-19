@@ -182,9 +182,9 @@ cython_debug/
 .abstra/
 
 # Visual Studio Code
-#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
+#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore
 #  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#  and can be added to the global gitignore or merged into this file. However, if you prefer, 
+#  and can be added to the global gitignore or merged into this file. However, if you prefer,
 #  you could uncomment the following to ignore the entire vscode folder
 # .vscode/
 
@@ -205,3 +205,32 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Manim rendered output (rebuild in CI)
+manim_scenes/rendered/high/
+manim_scenes/rendered/low/
+
+# Manim local render temp files (videos, Tex, jupyter cache)
+# We keep media/gifs/ — those are the final GIFs we commit to git.
+**/media/videos/
+**/media/images/
+**/media/Tex/
+**/media/jupyter/
+**/media/texts/
+
+# But DO track the curated GIF output
+!media/gifs/
+
+# Jupyter Book build output
+_build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude
+claude.md
+/scratch/
+scratch/
+docs/

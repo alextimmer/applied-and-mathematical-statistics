@@ -1,0 +1,53 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+         "workbench.colorCustomizations": {
+					"activityBar.activeBackground": "#2a8e47",
+					"activityBar.activeBorder": "#3ce36a",
+					"activityBar.background": "#2a8e47",
+					"activityBar.foreground": "#f5f5f5",
+					"activityBar.inactiveForeground": "#f5f5f599",
+					"activityBarBadge.background": "#3ce36a",
+					"activityBarBadge.foreground": "#f5f5f5",
+					"sash.hoverBorder": "#2a8e47",
+					"statusBar.background": "#3ce36a",
+					"statusBar.foreground": "#f5f5f5",
+					"statusBarItem.hoverBackground": "#2a8e47",
+					"statusBarItem.remoteBackground": "#3ce36a",
+					"statusBarItem.remoteForeground": "#f5f5f5",
+					"titleBar.activeBackground": "#3ce36a",
+					"titleBar.activeForeground": "#f5f5f5",
+					"titleBar.inactiveBackground": "#3ce36a99",
+					"titleBar.inactiveForeground": "#f5f5f599",
+					"commandCenter.border": "#f5f5f599",
+					"scrollbarSlider.background": "#2a8e47",
+					"scrollbarSlider.hoverBackground": "#3ce36a",
+					"scrollbarSlider.activeBackground": "#3ce36a",
+					"editorGroupHeader.tabsBackground": "#3ce36a",
+                     },
+		"editor.fontSize": 14,
+    	"editor.autoClosingBrackets": "beforeWhitespace",
+    	"terminal.integrated.fontSize": 14,
+		"git.enableSmartCommit": true,
+	    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+		"python.defaultInterpreterPath": "C:\\Users\\Alexander_Timmer\\Miniconda3\\envs\\amstats",
+		"yaml.schemas": {
+			"https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json": "file:///c%3A/Users/ian_staples/source/apollon/Dataintegration.Databricks.Workflows/pipelines/deploy-init-script.yaml"
+		},
+		"spellright.language": [
+			"en"
+		],
+		"spellright.documentTypes": [
+			"markdown",
+			"latex",
+			"plaintext"
+		],
+		"jupyter.interactiveWindow.cellMarker.codeRegex": "^# COMMAND ----------|^# Databricks notebook source|^(#\\s*%%|#\\s*\\<codecell\\>|#\\s*In\\[\\d*?\\]|#\\s*In\\[ \\])",
+		"jupyter.interactiveWindow.cellMarker.default": "# COMMAND ----------"
+	},
+
+}

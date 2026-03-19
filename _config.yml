@@ -1,0 +1,74 @@
+# Jupyter Book configuration
+# Docs: https://jupyterbook.org/en/stable/customize/config.html
+
+title: Applied and Mathematical Statistics
+author: Alexander Timmer
+logo: ""   # add a logo image path here when ready
+
+execute:
+  # Default: "off" — use outputs already saved in .ipynb files.
+  # Workflow: run notebooks in Jupyter, save with outputs, then `jb build .`
+  #
+  # To re-execute notebooks during build (requires full Manim + LaTeX stack):
+  #   execute_notebooks: "auto"       # only re-run notebooks missing outputs
+  #   execute_notebooks: "force"      # re-run ALL notebooks unconditionally
+  execute_notebooks: "off"
+  timeout: 300  # seconds per cell (only applies when execute_notebooks != "off")
+
+parse:
+  myst_enable_extensions:
+    - dollarmath        # $...$ and $$...$$ LaTeX math
+    - colon_fence       # ::: directives
+    - linkify           # auto-link URLs
+
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: false
+  home_page_in_navbar: true
+  baseurl: ""
+
+repository:
+  url: https://github.com/alextimmer/applied-and-mathematical-statistics
+  branch: main
+
+sphinx:
+  extra_extensions:
+    - sphinx.ext.mathjax
+
+# Only content lives in notebooks/ and README.md (the root page).
+# Exclude everything else so Jupyter Book doesn't try to parse
+# .claude/, .github/, scratch/, src/, etc.
+exclude_patterns:
+  - .claude
+  - .claude/**
+  - .github
+  - .github/**
+  - scratch
+  - scratch/**
+  - data
+  - data/**
+  - manim_scenes
+  - manim_scenes/**
+  - tests
+  - tests/**
+  - assignments
+  - assignments/**
+  - src
+  - src/**
+  - docs
+  - docs/**
+  - media
+  - media/**
+  - _build
+  - "**.ipynb_checkpoints"
+  - __pycache__
+  - CLAUDE.md
+  - Dockerfile
+  - "*.py"
+  - "*.toml"
+  - "*.yml"
+  - "*.yaml"
+  - "*.code-workspace"
+  - Thumbs.db
+  - .DS_Store

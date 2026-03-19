@@ -1,0 +1,79 @@
+# Jupyter Book — Table of Contents
+# Docs: https://jupyterbook.org/en/stable/structure/toc.html
+#
+# IMPORTANT: When you add a new notebook, add it here too!
+# The order below defines the navigation sidebar of the built site.
+
+format: jb-book
+root: README
+
+parts:
+  - caption: Prerequisites
+    chapters:
+      - file: notebooks/00_prerequisites/02_math_foundations
+      - file: notebooks/00_prerequisites/01_python_and_tools
+
+  - caption: "Module 01: Probability Basics"
+    chapters:
+      - file: notebooks/01_probability_basics/01_sample_spaces
+      - file: notebooks/01_probability_basics/02_combinatorics
+      - file: notebooks/01_probability_basics/03_conditional_probability
+      - file: notebooks/01_probability_basics/04_law_of_total_probability
+      - file: notebooks/01_probability_basics/05_random_variables
+      - file: notebooks/01_probability_basics/06_inequalities
+
+  - caption: "Module 02: Distributions"
+    chapters:
+      - file: notebooks/02_distributions/01_discrete_distributions
+      - file: notebooks/02_distributions/02_continuous_distributions
+      - file: notebooks/02_distributions/03_central_limit_theorem
+
+  - caption: "Module 03: Descriptive Statistics"
+    chapters:
+      - file: notebooks/03_descriptive_stats/01_summary_statistics
+      - file: notebooks/03_descriptive_stats/02_data_exploration
+
+  - caption: "Module 04: Estimation"
+    chapters:
+      - file: notebooks/04_estimation/01_point_estimation
+      - file: notebooks/04_estimation/02_method_of_moments
+      - file: notebooks/04_estimation/03_maximum_likelihood
+      - file: notebooks/04_estimation/04_confidence_intervals
+      - file: notebooks/04_estimation/05_frequentist_inference_visualised
+
+  - caption: "Module 05: Hypothesis Testing"
+    chapters:
+      - file: notebooks/05_hypothesis_testing/01_hypothesis_framework
+      - file: notebooks/05_hypothesis_testing/02_common_tests
+      - file: notebooks/05_hypothesis_testing/03_errors_and_power
+      - file: notebooks/05_hypothesis_testing/04_multiple_testing
+      - file: notebooks/05_hypothesis_testing/05_roc_curves
+
+  - caption: "Module 06: Linear Models"
+    chapters:
+      - file: notebooks/06_linear_models/01_simple_linear_regression
+      - file: notebooks/06_linear_models/02_multiple_regression
+      - file: notebooks/06_linear_models/03_diagnostics
+      - file: notebooks/06_linear_models/04_anova
+      - file: notebooks/06_linear_models/05_model_selection
+
+  - caption: "Module 07: Bayesian Inference"
+    chapters:
+      - file: notebooks/07_bayesian_inference/01_bayes_theorem_revisited
+      - file: notebooks/07_bayesian_inference/02_conjugate_priors
+      - file: notebooks/07_bayesian_inference/03_grid_and_quadratic_approximation
+      - file: notebooks/07_bayesian_inference/04_mcmc_from_scratch
+      - file: notebooks/07_bayesian_inference/05_mcmc_diagnostics
+
+  - caption: "Module 08: Bayesian Regression"
+    chapters:
+      - file: notebooks/08_bayesian_regression/01_bayesian_linear_regression
+      - file: notebooks/08_bayesian_regression/02_bayesian_logistic_regression
+      - file: notebooks/08_bayesian_regression/03_model_comparison
+
+  # ── Uncomment modules as notebooks are created ──────────────────
+  # - caption: "Module 09: Hierarchical Models"
+  # - caption: "Module 10: Causal Inference"
+  # - caption: "Module 11: Machine Learning & Generative AI"
+  # - caption: "Module 12: Advanced Topics"
+  # - caption: "Module 13: Projects"

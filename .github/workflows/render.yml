@@ -1,0 +1,46 @@
+name: Render Manim Scenes
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libcairo2-dev libpango1.0-dev ffmpeg \
+            texlive texlive-latex-extra texlive-fonts-extra \
+            texlive-latex-recommended texlive-science
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -e ".[dev]"
+          pip install manim
+
+      - name: Render all standalone scenes (high quality)
+        run: |
+          for scene_file in manim_scenes/**/*.py; do
+            [ -f "$scene_file" ] || continue
+            echo "Rendering $scene_file"
+            manim render -qh "$scene_file" -o manim_scenes/rendered/high/ || true
+          done
+
+      - name: Upload rendered media
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-scenes
+          path: manim_scenes/rendered/
