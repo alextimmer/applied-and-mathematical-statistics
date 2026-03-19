@@ -35,6 +35,11 @@ repository:
 sphinx:
   extra_extensions:
     - sphinx.ext.mathjax
+  config:
+    html_theme_options:
+      pygments_dark_style: "monokai"
+    html_context:
+      default_mode: "dark"
 
 # Only content lives in notebooks/ and README.md (the root page).
 # Exclude everything else so Jupyter Book doesn't try to parse
