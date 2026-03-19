@@ -1,6 +1,6 @@
 # Applied and Mathematical Statistics
 
-An interactive, notebook-first course in applied statistics — powered by **Manim Community Edition** animations and **Python**.
+An interactive, notebook-first course in applied statistics.
 
 ## What is this course?
 
@@ -18,22 +18,22 @@ By the end, you'll never use a statistical tool you don't understand.
 
 ## Modules
 
-| # | Module | Topics |
-|---|--------|--------|
-| 00 | Prerequisites | Python, NumPy, Matplotlib refresher |
-| 01 | Probability Basics | Sample spaces, combinatorics, conditional probability, Bayes' theorem |
-| 02 | Distributions | Discrete & continuous families, CLT |
-| 03 | Descriptive Statistics | Summary stats, data exploration |
-| 04 | Estimation | MLE, confidence intervals, bootstrap |
-| 05 | Hypothesis Testing | p-values, power, ROC curves |
-| 06 | Linear Models | Regression, ANOVA, diagnostics |
-| 07 | Bayesian Inference | Priors, posteriors, MCMC |
-| 08 | Bayesian Regression | PyMC, model comparison |
-| 09 | Hierarchical Models | Partial pooling, varying effects |
-| 10 | Causal Inference | DAGs, confounds, do-calculus |
-| 11 | Machine Learning & Generative AI | ML foundations, neural nets, generative models |
-| 12 | Advanced Topics | GPs, HMMs, missing data |
-| 13 | Projects | Capstone exercises |
+| #  | Module                           | Topics                                                                |
+|----|----------------------------------|-----------------------------------------------------------------------|
+| 00 | Prerequisites                    | Python, NumPy, Matplotlib refresher                                   |
+| 01 | Probability Basics               | Sample spaces, combinatorics, conditional probability, Bayes' theorem |
+| 02 | Distributions                    | Discrete & continuous families, CLT                                   |
+| 03 | Descriptive Statistics           | Summary stats, data exploration                                       |
+| 04 | Estimation                       | MLE, confidence intervals, bootstrap                                  |
+| 05 | Hypothesis Testing               | p-values, power, ROC curves                                           |
+| 06 | Linear Models                    | Regression, ANOVA, diagnostics                                        |
+| 07 | Bayesian Inference               | Priors, posteriors, MCMC                                              |
+| 08 | Bayesian Regression              | PyMC, model comparison                                                |
+| 09 | Hierarchical Models              | Partial pooling, varying effects                                      |
+| 10 | Causal Inference                 | DAGs, confounds, do-calculus                                          |
+| 11 | Machine Learning & Generative AI | ML foundations, neural nets, generative models                        |
+| 12 | Advanced Topics                  | GPs, HMMs, missing data                                               |
+| 13 | Projects                         | Capstone exercises                                                    |
 
 ## Getting Started
 
