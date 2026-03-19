@@ -27,13 +27,27 @@ jobs:
       - name: Install Jupyter Book
         run: pip install jupyter-book
 
-      - name: Build the book
+      - name: Show files
         run: |
-          jupyter-book build . 2>&1
-          echo "Exit code: $?"
-          echo "=== Contents of _build ==="
-          ls -la _build/ 2>/dev/null || echo "_build does not exist"
-          ls -la _build/html/ 2>/dev/null || echo "_build/html does not exist"
+          echo "=== Root files ==="
+          ls -la
+          echo "=== _config.yml ==="
+          cat _config.yml
+          echo "=== _toc.yml ==="
+          cat _toc.yml
+          echo "=== Notebooks ==="
+          find notebooks -name "*.ipynb" | wc -l
+
+      - name: Build the book
+        run: jupyter-book build . --all -v
+
+      - name: Verify build output
+        run: |
+          if [ ! -d "_build/html" ]; then
+            echo "ERROR: _build/html does not exist!"
+            exit 1
+          fi
+          echo "Build produced $(find _build/html -name '*.html' | wc -l) HTML files"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
