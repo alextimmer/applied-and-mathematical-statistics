@@ -28,7 +28,12 @@ jobs:
         run: pip install jupyter-book
 
       - name: Build the book
-        run: jupyter-book build .
+        run: |
+          jupyter-book build . 2>&1
+          echo "Exit code: $?"
+          echo "=== Contents of _build ==="
+          ls -la _build/ 2>/dev/null || echo "_build does not exist"
+          ls -la _build/html/ 2>/dev/null || echo "_build/html does not exist"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
