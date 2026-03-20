@@ -84,6 +84,16 @@ parts:
       - file: notebooks/10_causal_inference/02_confounds
       - file: notebooks/10_causal_inference/03_good_bad_controls
       - file: notebooks/10_causal_inference/04_do_calculus_intro
-  # - caption: "Module 11: Machine Learning & Generative AI"
+  - caption: "Module 11: Machine Learning"
+    chapters:
+      - file: notebooks/11_machine_learning/01_regularisation
+      - file: notebooks/11_machine_learning/02_tree_based_methods
+      - file: notebooks/11_machine_learning/03_gaussian_processes
   # - caption: "Module 12: Advanced Topics"
-  # - caption: "Module 13: Projects"
+  - caption: "Module 13: Digital Chemistry"
+    chapters:
+      - file: notebooks/13_digital_chemistry/01_qsar_molecular_property_prediction
+      - file: notebooks/13_digital_chemistry/02_bayesian_optimisation_molecular_design
+      - file: notebooks/13_digital_chemistry/03_molecular_representations
+      - file: notebooks/13_digital_chemistry/04_chemical_databases
+      - file: notebooks/13_digital_chemistry/05_applied_molecular_ml

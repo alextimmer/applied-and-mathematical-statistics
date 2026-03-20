@@ -1,5 +1,7 @@
 # Applied and Mathematical Statistics
 
+**[Read the course online](https://alextimmer.github.io/applied-and-mathematical-statistics/)**
+
 An interactive, notebook-first course in applied statistics.
 
 ## What is this course?
@@ -31,9 +33,9 @@ By the end, you'll never use a statistical tool you don't understand.
 | 08 | Bayesian Regression              | PyMC, model comparison                                                |
 | 09 | Hierarchical Models              | Partial pooling, varying effects                                      |
 | 10 | Causal Inference                 | DAGs, confounds, do-calculus                                          |
-| 11 | Machine Learning & Generative AI | ML foundations, neural nets, generative models                        |
-| 12 | Advanced Topics                  | GPs, HMMs, missing data                                               |
-| 13 | Projects                         | Capstone exercises                                                    |
+| 11 | Machine Learning                 | Regularisation, trees, Gaussian processes                              |
+| 12 | Advanced Topics                  | *(planned)*                                                           |
+| 13 | Digital Chemistry                | QSAR, Bayesian optimisation, molecular representations, chemical databases |
 
 ## Getting Started
 

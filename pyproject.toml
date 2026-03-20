@@ -29,6 +29,9 @@ dev = [
     "jupyter-book>=1.0,<2",
     "nbconvert>=7.14,<8",
 ]
+cheminformatics = [
+    "rdkit>=2024.03",
+]
 bayesian = [
     "pymc>=5.10,<6",
     "arviz>=0.17,<1",
