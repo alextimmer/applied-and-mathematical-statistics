@@ -12,6 +12,7 @@ parts:
     chapters:
       - file: notebooks/00_prerequisites/02_math_foundations
       - file: notebooks/00_prerequisites/01_python_and_tools
+      - file: notebooks/00_prerequisites/03_statistical_glossary
 
   - caption: "Module 01: Probability Basics"
     chapters:
