@@ -71,8 +71,12 @@ parts:
       - file: notebooks/08_bayesian_regression/02_bayesian_logistic_regression
       - file: notebooks/08_bayesian_regression/03_model_comparison
 
-  # ── Uncomment modules as notebooks are created ──────────────────
-  # - caption: "Module 09: Hierarchical Models"
+  - caption: "Module 09: Hierarchical Models"
+    chapters:
+      - file: notebooks/09_hierarchical_models/01_partial_pooling
+      - file: notebooks/09_hierarchical_models/02_varying_intercepts
+      - file: notebooks/09_hierarchical_models/03_varying_slopes
+      - file: notebooks/09_hierarchical_models/04_practical_hierarchical
 
   - caption: "Module 10: Causal Inference"
     chapters:
