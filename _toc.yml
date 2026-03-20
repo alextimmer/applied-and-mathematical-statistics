@@ -73,7 +73,13 @@ parts:
 
   # ── Uncomment modules as notebooks are created ──────────────────
   # - caption: "Module 09: Hierarchical Models"
-  # - caption: "Module 10: Causal Inference"
+
+  - caption: "Module 10: Causal Inference"
+    chapters:
+      - file: notebooks/10_causal_inference/01_dags_and_causality
+      - file: notebooks/10_causal_inference/02_confounds
+      - file: notebooks/10_causal_inference/03_good_bad_controls
+      - file: notebooks/10_causal_inference/04_do_calculus_intro
   # - caption: "Module 11: Machine Learning & Generative AI"
   # - caption: "Module 12: Advanced Topics"
   # - caption: "Module 13: Projects"
