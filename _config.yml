@@ -35,14 +35,11 @@ repository:
 sphinx:
   extra_extensions:
     - sphinx.ext.mathjax
-    - sphinx_togglebutton
   config:
     html_theme_options:
       pygments_dark_style: "monokai"
     html_context:
       default_mode: "dark"
-    nb_code_prompt_show: "Show code ▶"
-    nb_code_prompt_hide: "Hide code ▼"
 
 # Only content lives in notebooks/ and README.md (the root page).
 # Exclude everything else so Jupyter Book doesn't try to parse
