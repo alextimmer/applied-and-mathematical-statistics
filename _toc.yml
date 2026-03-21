@@ -28,6 +28,7 @@ parts:
       - file: notebooks/02_distributions/01_discrete_distributions
       - file: notebooks/02_distributions/02_continuous_distributions
       - file: notebooks/02_distributions/03_central_limit_theorem
+      - file: notebooks/02_distributions/04_monte_carlo_sampling
 
   - caption: "Module 03: Descriptive Statistics"
     chapters:
@@ -90,7 +91,9 @@ parts:
       - file: notebooks/11_machine_learning/01_regularisation
       - file: notebooks/11_machine_learning/02_tree_based_methods
       - file: notebooks/11_machine_learning/03_gaussian_processes
-  # - caption: "Module 12: Advanced Topics"
+  - caption: "Module 12: Advanced Topics"
+    chapters:
+      - file: notebooks/12_advanced_topics/01_time_series_fundamentals
   - caption: "Module 13: Digital Chemistry"
     chapters:
       - file: notebooks/13_digital_chemistry/01_qsar_molecular_property_prediction
