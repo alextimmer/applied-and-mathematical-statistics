@@ -1,21 +1,35 @@
-MIT License
+Copyright (c) 2025-2026 Dr. Alexander Timmer. All rights reserved.
 
-Copyright (c) 2026 Alexander Timmer
+EDUCATIONAL USE LICENSE
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Ownership
+   All course materials in this repository — including but not limited to
+   notebooks, code, animations, figures, lecture text, exercises, and
+   assignments — are the intellectual property of Dr. Alexander Timmer.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+2. Student Use
+   Students enrolled in courses taught by Dr. Alexander Timmer are granted a
+   personal, non-exclusive, non-transferable, revocable licence to:
+     (a) view, download, and run the materials for their own study;
+     (b) complete and submit exercises and assignments derived from
+         the materials;
+     (c) retain personal copies for reference after the course ends.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+3. Restrictions
+   Unless expressly authorised in writing by Dr. Alexander Timmer, no person
+   or organisation may:
+     (a) redistribute, publish, or share these materials (in whole or in part)
+         in any form — including but not limited to websites, repositories,
+         course packs, or printed handouts;
+     (b) use these materials to deliver, supplement, or develop courses,
+         workshops, tutorials, or training programmes at any institution;
+     (c) create derivative works based on these materials for commercial or
+         institutional use;
+     (d) remove or alter any copyright notice, watermark, or attribution.
+
+4. No Warranty
+   The materials are provided "as is" without warranty of any kind. The author
+   is not liable for any damages arising from their use.
+
+5. Termination
+   This licence is automatically revoked for any party that violates its terms.

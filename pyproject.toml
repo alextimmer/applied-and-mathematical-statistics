@@ -31,6 +31,8 @@ dev = [
 ]
 cheminformatics = [
     "rdkit>=2024.03",
+    "nistchempy>=0.5",
+    "jcamp>=1.2",
 ]
 bayesian = [
     "pymc>=5.10,<6",

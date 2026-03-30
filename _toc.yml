@@ -100,4 +100,3 @@ parts:
       - file: notebooks/13_digital_chemistry/02_bayesian_optimisation_molecular_design
       - file: notebooks/13_digital_chemistry/03_molecular_representations
       - file: notebooks/13_digital_chemistry/04_chemical_databases
-      - file: notebooks/13_digital_chemistry/05_applied_molecular_ml

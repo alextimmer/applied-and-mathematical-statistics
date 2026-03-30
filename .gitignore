@@ -221,6 +221,10 @@ manim_scenes/rendered/low/
 # But DO track the curated GIF output
 !media/gifs/
 
+# Digital chemistry notebooks not yet ready for publishing
+notebooks/13_digital_chemistry/06_molecular_spectroscopy_databases.ipynb
+notebooks/13_digital_chemistry/07_spectral_smoothing_preprocessing.ipynb
+
 # Jupyter Book build output
 _build/
 

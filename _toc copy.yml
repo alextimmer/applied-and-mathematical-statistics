@@ -1,0 +1,105 @@
+# Jupyter Book — Table of Contents
+# Docs: https://jupyterbook.org/en/stable/structure/toc.html
+#
+# IMPORTANT: When you add a new notebook, add it here too!
+# The order below defines the navigation sidebar of the built site.
+
+format: jb-book
+root: README
+
+parts:
+  - caption: Prerequisites
+    chapters:
+      - file: notebooks/00_prerequisites/02_math_foundations
+      - file: notebooks/00_prerequisites/01_python_and_tools
+      - file: notebooks/00_prerequisites/03_statistical_glossary
+
+  - caption: "Module 01: Probability Basics"
+    chapters:
+      - file: notebooks/01_probability_basics/01_sample_spaces
+      - file: notebooks/01_probability_basics/02_combinatorics
+      - file: notebooks/01_probability_basics/03_conditional_probability
+      - file: notebooks/01_probability_basics/04_law_of_total_probability
+      - file: notebooks/01_probability_basics/05_random_variables
+      - file: notebooks/01_probability_basics/06_inequalities
+
+  - caption: "Module 02: Distributions"
+    chapters:
+      - file: notebooks/02_distributions/01_discrete_distributions
+      - file: notebooks/02_distributions/02_continuous_distributions
+      - file: notebooks/02_distributions/03_central_limit_theorem
+      - file: notebooks/02_distributions/04_monte_carlo_sampling
+
+  - caption: "Module 03: Descriptive Statistics"
+    chapters:
+      - file: notebooks/03_descriptive_stats/01_summary_statistics
+      - file: notebooks/03_descriptive_stats/02_data_exploration
+
+  - caption: "Module 04: Estimation"
+    chapters:
+      - file: notebooks/04_estimation/01_point_estimation
+      - file: notebooks/04_estimation/02_method_of_moments
+      - file: notebooks/04_estimation/03_maximum_likelihood
+      - file: notebooks/04_estimation/04_confidence_intervals
+      - file: notebooks/04_estimation/05_frequentist_inference_visualised
+
+  - caption: "Module 05: Hypothesis Testing"
+    chapters:
+      - file: notebooks/05_hypothesis_testing/01_hypothesis_framework
+      - file: notebooks/05_hypothesis_testing/02_common_tests
+      - file: notebooks/05_hypothesis_testing/03_errors_and_power
+      - file: notebooks/05_hypothesis_testing/04_multiple_testing
+      - file: notebooks/05_hypothesis_testing/05_roc_curves
+
+  - caption: "Module 06: Linear Models"
+    chapters:
+      - file: notebooks/06_linear_models/01_simple_linear_regression
+      - file: notebooks/06_linear_models/02_multiple_regression
+      - file: notebooks/06_linear_models/03_diagnostics
+      - file: notebooks/06_linear_models/04_anova
+      - file: notebooks/06_linear_models/05_model_selection
+
+  - caption: "Module 07: Bayesian Inference"
+    chapters:
+      - file: notebooks/07_bayesian_inference/01_bayes_theorem_revisited
+      - file: notebooks/07_bayesian_inference/02_conjugate_priors
+      - file: notebooks/07_bayesian_inference/03_grid_and_quadratic_approximation
+      - file: notebooks/07_bayesian_inference/04_mcmc_from_scratch
+      - file: notebooks/07_bayesian_inference/05_mcmc_diagnostics
+
+  - caption: "Module 08: Bayesian Regression"
+    chapters:
+      - file: notebooks/08_bayesian_regression/01_bayesian_linear_regression
+      - file: notebooks/08_bayesian_regression/02_bayesian_logistic_regression
+      - file: notebooks/08_bayesian_regression/03_model_comparison
+
+  - caption: "Module 09: Hierarchical Models"
+    chapters:
+      - file: notebooks/09_hierarchical_models/01_partial_pooling
+      - file: notebooks/09_hierarchical_models/02_varying_intercepts
+      - file: notebooks/09_hierarchical_models/03_varying_slopes
+      - file: notebooks/09_hierarchical_models/04_practical_hierarchical
+
+  - caption: "Module 10: Causal Inference"
+    chapters:
+      - file: notebooks/10_causal_inference/01_dags_and_causality
+      - file: notebooks/10_causal_inference/02_confounds
+      - file: notebooks/10_causal_inference/03_good_bad_controls
+      - file: notebooks/10_causal_inference/04_do_calculus_intro
+  - caption: "Module 11: Machine Learning"
+    chapters:
+      - file: notebooks/11_machine_learning/01_regularisation
+      - file: notebooks/11_machine_learning/02_tree_based_methods
+      - file: notebooks/11_machine_learning/03_gaussian_processes
+  - caption: "Module 12: Advanced Topics"
+    chapters:
+      - file: notebooks/12_advanced_topics/01_time_series_fundamentals
+  - caption: "Module 13: Digital Chemistry"
+    chapters:
+      - file: notebooks/13_digital_chemistry/01_qsar_molecular_property_prediction
+      - file: notebooks/13_digital_chemistry/02_bayesian_optimisation_molecular_design
+      - file: notebooks/13_digital_chemistry/03_molecular_representations
+      - file: notebooks/13_digital_chemistry/04_chemical_databases
+      - file: notebooks/13_digital_chemistry/05_applied_molecular_ml
+      - file: notebooks/13_digital_chemistry/06_molecular_spectroscopy_databases
+      - file: notebooks/13_digital_chemistry/07_spectral_smoothing_preprocessing
