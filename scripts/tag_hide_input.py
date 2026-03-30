@@ -2,16 +2,20 @@
 Tag notebook code cells for visibility in the Jupyter Book HTML build.
 
 Since _config.yml sets nb_code_source_hidden: true, ALL code cells are hidden
-by default. This script adds 'show-input' to cells that students should see.
+by default (behind a toggle). This script goes further:
+
+  - Cells to REMOVE completely:  get 'remove-input' tag  (no toggle, invisible)
+  - Cells to SHOW:               get 'show-input' tag    (visible by default)
+  - Everything else:             stays hidden behind toggle (default behavior)
 
 Rules:
-  - Manim cells (%%manim)           → NEVER show
-  - Setup cells (class Cfg, etc.)   → NEVER show
-  - Pure plotting cells             → NEVER show
+  - Manim cells (%%manim)           → remove-input  (IP: completely invisible)
+  - Pure plotting cells             → remove-input  (IP: completely invisible)
+  - Setup cells (class Cfg, etc.)   → (no tag)      (hidden behind toggle)
   - Plotting cells with educational
     code (def, class, significant
-    logic beyond the plot)          → SHOW
-  - All other code cells            → SHOW
+    logic beyond the plot)          → show-input    (visible)
+  - All other code cells            → show-input    (visible)
 
 ONLY modifies cell["metadata"]["tags"] — never touches code, text, or outputs.
 
@@ -131,49 +135,44 @@ def process_notebook(nb_path: Path, apply: bool) -> list[str]:
 
         # --- Decide visibility ---
 
-        # Manim cells: NEVER show
-        if is_manim_cell(source):
-            if "show-input" in tags:
-                changes.append(f"  cell {i}: - show-input  (manim cell, must hide)")
+        def set_tag(desired, reason):
+            """Ensure cell has exactly the desired tag (or no tag).
+            desired: 'remove-input', 'show-input', or None (no tag)."""
+            nonlocal modified
+            for t in ("remove-input", "show-input"):
+                if t in tags and t != desired:
+                    changes.append(f"  cell {i}: - {t}  ({reason})")
+                    if apply:
+                        tags.remove(t)
+                        modified = True
+            if desired and desired not in tags:
+                changes.append(f"  cell {i}: + {desired}  ({reason})")
                 if apply:
-                    tags.remove("show-input")
+                    tags.append(desired)
                     modified = True
+
+        # Manim cells: completely remove from HTML (IP protection)
+        if is_manim_cell(source):
+            set_tag("remove-input", "manim cell")
             continue
 
-        # Setup cells: NEVER show
+        # Setup cells: hidden behind toggle (no tag needed)
         if not found_first_code:
             found_first_code = True
             if is_setup_cell(source):
-                if "show-input" in tags:
-                    changes.append(f"  cell {i}: - show-input  (setup cell, must hide)")
-                    if apply:
-                        tags.remove("show-input")
-                        modified = True
+                set_tag(None, "setup cell")
                 continue
 
-        # Plot cells: only show if they contain educational content
+        # Plot cells: remove pure plots (IP), show educational ones
         if is_plot_cell(source):
             if has_educational_content(source):
-                if "show-input" not in tags:
-                    changes.append(f"  cell {i}: + show-input  (plot cell with educational code)")
-                    if apply:
-                        tags.append("show-input")
-                        modified = True
+                set_tag("show-input", "plot cell with educational code")
             else:
-                # Pure plot cell — ensure hidden
-                if "show-input" in tags:
-                    changes.append(f"  cell {i}: - show-input  (pure plot cell, must hide)")
-                    if apply:
-                        tags.remove("show-input")
-                        modified = True
+                set_tag("remove-input", "pure plot cell")
             continue
 
         # All other code cells: SHOW
-        if "show-input" not in tags:
-            changes.append(f"  cell {i}: + show-input  (educational code)")
-            if apply:
-                tags.append("show-input")
-                modified = True
+        set_tag("show-input", "educational code")
 
     if apply and modified:
         with open(nb_path, "w", encoding="utf-8", newline="\n") as f:
@@ -196,7 +195,8 @@ def main():
     nb_files = sorted(notebooks_dir.rglob("*.ipynb"))
 
     total_show = 0
-    total_hide = 0
+    total_remove = 0
+    total_cleared = 0
     for nb_path in nb_files:
         if ".ipynb_checkpoints" in str(nb_path):
             continue
@@ -208,13 +208,16 @@ def main():
                 print(c)
                 if "+ show-input" in c:
                     total_show += 1
-                elif "- show-input" in c:
-                    total_hide += 1
+                elif "+ remove-input" in c:
+                    total_remove += 1
+                elif c.startswith("  cell") and "- " in c:
+                    total_cleared += 1
             print()
 
     action = "tagged" if apply else "would be tagged"
     print(f"--- Total: {total_show} cells {action} show-input, "
-          f"{total_hide} cells {action} hidden ---")
+          f"{total_remove} cells {action} remove-input, "
+          f"{total_cleared} stale tags cleared ---")
 
 
 if __name__ == "__main__":
